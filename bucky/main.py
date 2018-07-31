@@ -18,11 +18,13 @@ def mouseClicked(event):
 def mouseMoved(event):
     button1.mouse_on(event)
     button1.update()
-    root.update()
 
+
+def draw():
+    print("hello")
 canvas.bind("<Button-1>", mouseClicked)
 canvas.bind("<Motion>", mouseMoved)
-
 canvas.pack()
 root.mainloop()
+
 

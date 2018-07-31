@@ -42,8 +42,6 @@ class MyButton:
         self.mouseOn = False
     def update(self):
         if self.mouseOn:
-            self.canvas.delete(self.text)
-            self.text = self.canvas.create_text(self.textX, self.textY, text=self.str, fill="green", font=self.font)
+            self.canvas.itemconfig(self.text, fill="green")
         else:
-            self.canvas.delete(self.text)
-            self.text = self.canvas.create_text(self.textX, self.textY, text=self.str, fill="red", font=self.font)
+            self.canvas.itemconfig(self.text, fill="red")
